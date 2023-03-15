@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Pokemon Cards</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="card__shine">
+            <div class="card__glare">
+        <div class="box">
+            <h2 class="name">pikachu</h2>
+            <div class="circle"></div>
+            <img src="img/pikachu.png" class="product"> 
+        </div>
+    </div>
+    </div>
+</div>
+    <script src="js/vanilla-tilt.min.js"></script>
+    <script>
+    VanillaTilt.init(document.querySelector(".box"), {
+    max: 25,
+    speed: 400
+}); 
+    </script>
+</body> 
+</html>

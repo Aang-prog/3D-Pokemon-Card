@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #131313;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  transform-style: preserve-3d;
+}
+
+.container .box {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px;
+  background-image: url(img/card.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  transform-style: preserve-3d;
+}
+
+.container .box::before {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  font-size: 5em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.container .box:hover::before,
+.container .box:hover::after {
+  opacity: 0.04;
+}
+.container .box::after {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 5em;
+  font-weight: 900;
+  color: #fff;
+  font-style: italic;
+  opacity: 0;
+}
+.container .box .name {
+  position: absolute;
+  font-weight: bolder;
+  top: 6px;
+  right: 60px;
+  text-align: center;
+  color: rgb(3, 3, 3);
+  width: 100%;
+  font-size: 18px;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 10px);
+  transition: 0.5s;
+  opacity: 1;
+  z-index: 10;
+}
+
+.container .box:hover .name {
+  top: 6px;
+  opacity: 1;
+  transform: translate3d(0, 0, 80px);
+}
+
+.container .box .circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  transition: 0.5s;
+  background: #fff;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 50px);
+  z-index: 10;
+  opacity: 0;
+}
+
+.container .box .product {
+  position: absolute;
+  top: 27%;
+  left: 35%;
+  max-width: 150px;
+  transition: 0.5s;
+  z-index: 11;
+  transform-style: preserve-3d;
+  transform: translate3d(-50%, -50%, 0px);
+}
+
+.container .box:hover .product {
+  transform: translate3d(-50%, -50%, 70px);
+}
+
+body {
+    background-color: rgb(102, 101, 101);
+}
